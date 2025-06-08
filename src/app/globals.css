@@ -1,0 +1,194 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply scroll-smooth;
+  }
+  :root {
+    --background: 0 0% 100%; /* White */
+    --foreground: 210 10% 23%; /* Dark Grey */
+
+    --card: 0 0% 100%; /* White */
+    --card-foreground: 210 10% 23%;
+
+    --popover: 0 0% 100%; /* White */
+    --popover-foreground: 210 10% 23%;
+
+    --primary: 210 33% 75%; /* Soft Blue #A0BFE0 - Retained for FAB, can be themed if needed */
+    --primary-foreground: 210 25% 15%; /* Darker Blue/Grey for contrast */
+
+    --secondary: 205 40% 88%; /* Another soft blue, lighter */
+    --secondary-foreground: 210 10% 23%;
+
+    --muted: 200 40% 94%; /* Lighter muted tone - Used for ThematicIndex button backgrounds if not themed */
+    --muted-foreground: 200 20% 55%; /* Softer muted text - Used for subtitles */
+
+    --accent: 26 87% 70%; /* Light Salmon #F4A26E */
+    --accent-foreground: 20 30% 15%; /* Darker Salmon/Brown for contrast */
+
+    --destructive: 0 70% 75%; /* Softer Red #F0A3A3 */
+    --destructive-foreground: 210 10% 10%; /* Very Dark Grey for contrast */
+
+    --border: 210 25% 88%; /* Softer, lighter border */
+    --input: 0 0% 100%; /* White input background */
+    --ring: 210 33% 70%; /* Primary-like ring, slightly desaturated */
+    --radius: 0.5rem;
+
+    /* Spectrum Colors */
+    --theme-color-spectrum-1-bg: hsl(200, 100%, 94%);
+    --theme-color-spectrum-1-border: hsl(200, 70%, 65%);
+    --theme-color-spectrum-2-bg: hsl(180, 70%, 93%);
+    --theme-color-spectrum-2-border: hsl(180, 50%, 60%);
+    --theme-color-spectrum-3-bg: hsl(140, 60%, 92%);
+    --theme-color-spectrum-3-border: hsl(140, 40%, 60%);
+    --theme-color-spectrum-4-bg: hsl(100, 70%, 93%);
+    --theme-color-spectrum-4-border: hsl(100, 50%, 65%);
+    --theme-color-spectrum-5-bg: hsl(60, 100%, 92%);
+    --theme-color-spectrum-5-border: hsl(60, 70%, 65%);
+    --theme-color-spectrum-6-bg: hsl(45, 100%, 92%);
+    --theme-color-spectrum-6-border: hsl(45, 70%, 65%);
+    --theme-color-spectrum-7-bg: hsl(30, 100%, 93%);
+    --theme-color-spectrum-7-border: hsl(30, 70%, 65%);
+    --theme-color-spectrum-8-bg: hsl(15, 100%, 93%);
+    --theme-color-spectrum-8-border: hsl(15, 70%, 65%);
+    --theme-color-spectrum-9-bg: hsl(0, 100%, 94%);
+    --theme-color-spectrum-9-border: hsl(0, 70%, 70%);
+    --theme-color-spectrum-10-bg: hsl(330, 80%, 94%);
+    --theme-color-spectrum-10-border: hsl(330, 50%, 70%);
+    --theme-color-spectrum-11-bg: hsl(290, 70%, 94%);
+    --theme-color-spectrum-11-border: hsl(290, 50%, 70%);
+
+
+    --theme-color-reincidencia-badge-bg: hsl(0, 80%, 93%); /* Vermelho pastel claro */
+    --theme-color-reincidencia-badge-text: hsl(0, 70%, 45%); /* Vermelho médio para texto */
+    --theme-color-reincidencia-badge-border: hsl(0, 70%, 70%); /* Vermelho para borda */
+    
+    --theme-color-primario-badge-bg: hsl(210, 100%, 94%); /* Azul pastel claro */
+    --theme-color-primario-badge-text: hsl(210, 70%, 40%); /* Azul médio para texto */
+    --theme-color-primario-badge-border: hsl(210, 70%, 70%); /* Azul para borda */
+
+    --theme-color-sem-violencia-badge-bg: hsl(120, 60%, 93%); /* Verde pastel claro */
+    --theme-color-sem-violencia-badge-text: hsl(120, 40%, 35%); /* Verde escuro para texto */
+    --theme-color-sem-violencia-badge-border: hsl(120, 40%, 60%); /* Verde para borda */
+
+    --theme-color-com-violencia-badge-bg: hsl(30, 100%, 92%); /* Laranja pastel claro */
+    --theme-color-com-violencia-badge-text: hsl(30, 70%, 40%); /* Laranja escuro para texto */
+    --theme-color-com-violencia-badge-border: hsl(30, 70%, 65%); /* Laranja para borda */
+
+
+    /* Chart colors (can be pastelized if charts are used later) */
+    --chart-1: hsl(12, 76%, 80%);
+    --chart-2: hsl(173, 58%, 75%);
+    --chart-3: hsl(197, 37%, 70%);
+    --chart-4: hsl(43, 74%, 80%);
+    --chart-5: hsl(27, 87%, 82%);
+  }
+
+  .dark {
+    --background: 210 10% 15%; /* Darker background */
+    --foreground: 0 0% 98%; /* Light Gray for dark mode text */
+
+    --card: 210 10% 20%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 210 10% 20%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 210 33% 75%;
+    --primary-foreground: 210 10% 15%;
+
+    --secondary: 205 40% 30%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 200 40% 25%; /* Darker muted tone for dark mode */
+    --muted-foreground: 200 20% 70%; /* Lighter muted text for dark mode */
+
+    --accent: 26 87% 70%;
+    --accent-foreground: 210 10% 15%;
+
+    --destructive: 0 70% 55%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 210 15% 30%;
+    --input: 210 15% 28%;
+    --ring: 210 33% 75%;
+
+    /* Dark mode spectrum colors (adjust brightness and saturation) */
+    --theme-color-spectrum-1-bg: hsl(200, 40%, 22%);
+    --theme-color-spectrum-1-border: hsl(200, 70%, 55%);
+    --theme-color-spectrum-2-bg: hsl(180, 30%, 21%);
+    --theme-color-spectrum-2-border: hsl(180, 50%, 50%);
+    --theme-color-spectrum-3-bg: hsl(140, 25%, 20%);
+    --theme-color-spectrum-3-border: hsl(140, 40%, 50%);
+    --theme-color-spectrum-4-bg: hsl(100, 30%, 21%);
+    --theme-color-spectrum-4-border: hsl(100, 50%, 55%);
+    --theme-color-spectrum-5-bg: hsl(60, 40%, 20%);
+    --theme-color-spectrum-5-border: hsl(60, 70%, 55%);
+    --theme-color-spectrum-6-bg: hsl(45, 40%, 20%);
+    --theme-color-spectrum-6-border: hsl(45, 70%, 55%);
+    --theme-color-spectrum-7-bg: hsl(30, 40%, 21%);
+    --theme-color-spectrum-7-border: hsl(30, 70%, 55%);
+    --theme-color-spectrum-8-bg: hsl(15, 40%, 21%);
+    --theme-color-spectrum-8-border: hsl(15, 70%, 55%);
+    --theme-color-spectrum-9-bg: hsl(0, 40%, 22%);
+    --theme-color-spectrum-9-border: hsl(0, 70%, 60%);
+    --theme-color-spectrum-10-bg: hsl(330, 30%, 22%);
+    --theme-color-spectrum-10-border: hsl(330, 50%, 60%);
+    --theme-color-spectrum-11-bg: hsl(290, 30%, 22%);
+    --theme-color-spectrum-11-border: hsl(290, 50%, 60%);
+
+
+    --theme-color-reincidencia-badge-bg: hsl(0, 50%, 30%); 
+    --theme-color-reincidencia-badge-text: hsl(0, 100%, 90%);
+    --theme-color-reincidencia-badge-border: hsl(0, 70%, 60%);
+
+    --theme-color-primario-badge-bg: hsl(210, 40%, 28%); 
+    --theme-color-primario-badge-text: hsl(210, 70%, 90%);
+    --theme-color-primario-badge-border: hsl(210, 70%, 55%);
+
+    --theme-color-sem-violencia-badge-bg: hsl(120, 30%, 25%);
+    --theme-color-sem-violencia-badge-text: hsl(120, 60%, 85%);
+    --theme-color-sem-violencia-badge-border: hsl(120, 40%, 50%);
+
+    --theme-color-com-violencia-badge-bg: hsl(30, 40%, 25%);
+    --theme-color-com-violencia-badge-text: hsl(30, 100%, 88%);
+    --theme-color-com-violencia-badge-border: hsl(30, 70%, 55%);
+
+
+    --chart-1: hsl(12, 76%, 70%);
+    --chart-2: hsl(173, 58%, 65%);
+    --chart-3: hsl(197, 37%, 60%);
+    --chart-4: hsl(43, 74%, 70%);
+    --chart-5: hsl(27, 87%, 72%);
+  }
+
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', sans-serif;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-headline text-foreground;
+  }
+}
+
+/* Fade-in animation */
+.fade-in-up {
+  animation: fadeInUp 0.7s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
