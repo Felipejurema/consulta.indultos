@@ -1,5 +1,5 @@
-# Firebase Studio
+# Dashboard de Indultos
 
-This is a NextJS starter in Firebase Studio.
+Este é um projeto de dashboard para a análise do Decreto nº 12.338/24.
 
-To get started, take a look at src/app/page.tsx.
+Feito para o uso do Ministério Público de Pernambuco.
